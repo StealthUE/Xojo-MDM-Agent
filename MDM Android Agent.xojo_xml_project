@@ -1,0 +1,4807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RBProject version="2025r1.1" FormatVersion="2" MinIDEVersion="20190200">
+<block type="Project" ID="0">
+ <ProjectSavedInVers>2025.011</ProjectSavedInVers>
+ <IDEVersion>20250101</IDEVersion>
+ <MajorVersion>3</MajorVersion>
+ <MinorVersion>0</MinorVersion>
+ <SubVersion>0</SubVersion>
+ <Release>0</Release>
+ <NonRelease>413</NonRelease>
+ <Region></Region>
+ <ShortVersion>3.0.0</ShortVersion>
+ <LongVersion></LongVersion>
+ <InfoVersion></InfoVersion>
+ <AutoIncVersion>1</AutoIncVersion>
+ <DefaultViewID>709871615</DefaultViewID>
+ <ProjectType>5</ProjectType>
+ <DefaultLanguage>0</DefaultLanguage>
+ <CurrentLanguage>0</CurrentLanguage>
+ <DefaultEncoding>0</DefaultEncoding>
+ <BuildFlags>16640</BuildFlags>
+ <UseBuildsFolder>1</UseBuildsFolder>
+ <WebApp>0</WebApp>
+ <DefaultTabletViewID>709871615</DefaultTabletViewID>
+ <Icon>
+ </Icon>
+ <BundleIdentifier>com.example.mdmandroidagent</BundleIdentifier>
+ <DarkMode>1</DarkMode>
+ <DebuggerCommandLine></DebuggerCommandLine>
+ <BuildMobileName>MDMAndroidAgent</BuildMobileName>
+ <MobileThemeColorName>green</MobileThemeColorName>
+ <MobileThemePrimaryColor>&amp;h00000000</MobileThemePrimaryColor>
+ <MobileThemeAccentColor>&amp;h00000000</MobileThemeAccentColor>
+ <MobileThemeStatusBarColor>&amp;h00000000</MobileThemeStatusBarColor>
+ <MobileManifestPermissions></MobileManifestPermissions>
+ <MobileProjectDependencies></MobileProjectDependencies>
+ <BuildForPlayStore>0</BuildForPlayStore>
+ <KeyStoreFile>D:\SVN\[Xojo]\[Android]\APK\keystore.properties</KeyStoreFile>
+ <OptimizationLevel>0</OptimizationLevel>
+ <MacMinimumVersion></MacMinimumVersion>
+</block>
+<block type="Module" ID="1150496767">
+ <ObjName>App</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>1</IsClass>
+ <Superclass>MobileApplication</Superclass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <IsApplicationObject>1</IsApplicationObject>
+ <Compatibility></Compatibility>
+ <HookInstance>
+  <ItemName>Opening</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1922246655</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Opening()</SourceLine>
+   <SourceLine>AndroidXojoMDM.LoadAndroidApp()</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <HookInstance>
+  <ItemName>UnhandledException</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>384610303</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function UnhandledException(exc As RuntimeException) As Boolean</SourceLine>
+   <SourceLine>PrintFile("UnhandledError: " + Str(exc.ErrorNumber) + ":" + exc.Message + ":" + String.FromArray(exc.Stack, ""), True)</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <HookInstance>
+  <ItemName>Closing</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>148103167</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Closing()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <HookInstance>
+  <ItemName>Activated</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1199898623</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Activated()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <HookInstance>
+  <ItemName>Deactivating</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>79755263</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Deactivating()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <HookInstance>
+  <ItemName>LowMemoryWarning</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>516384767</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub LowMemoryWarning()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <Property>
+  <ItemName>AppDataDictionary</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>467994623</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>AppDataDictionary As Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>AppDataDictionary As Dictionary</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>AppName</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1037150207</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>AppName As String = "MDM Agent"</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>AppName As String = "MDM Agent"</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>serviceIntent</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>409296895</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>serviceIntent As Ptr</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>serviceIntent As Ptr</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>isSecure</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1962532863</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>isSecure As Boolean = True</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>isSecure As Boolean = True</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>IPAddress</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1401313279</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>IPAddress As String = "mdm.example.com"</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>IPAddress As String = "mdm.example.com"</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>IPPort</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>156463103</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>IPPort As Integer = 8969</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>IPPort As Integer = 8969</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>AppIden</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1377908735</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>AppIden As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>AppIden As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>LoginInfo</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>269215743</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>LoginInfo As Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>LoginInfo As Dictionary</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>PolicyDic</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>870397951</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>PolicyDic As Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>PolicyDic As Dictionary</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>SavedCommands()</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1924827135</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>SavedCommands() As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>SavedCommands() As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>HDID</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1022167039</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>HDID As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>HDID As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>messageReceiver</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1143930879</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>messageReceiver As MessageEventReceiver</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>messageReceiver As MessageEventReceiver</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>IsConnectedPrev</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>893206527</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>IsConnectedPrev As Boolean = False</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>IsConnectedPrev As Boolean = False</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>IsConnectedSet</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1871648767</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>IsConnectedSet As Boolean = False</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>IsConnectedSet As Boolean = False</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>isEnrol</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>145909759</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>isEnrol As Boolean = False</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>isEnrol As Boolean = False</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>Device_SerialNumber</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1484734463</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Device_SerialNumber As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>Device_SerialNumber As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>Device_IMEI</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1806284799</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Device_IMEI As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>Device_IMEI As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>PolicyIDDic</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1151326207</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>PolicyIDDic As Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>PolicyIDDic As Dictionary</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredLat</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1789143039</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredLat As Double = -1</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredLat As Double = -1</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredLong</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1210941439</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredLong As Double = -1</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredLong As Double = -1</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>GPSDistanceChangeUpdateMeters</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1320544255</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>GPSDistanceChangeUpdateMeters As Integer = 100</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>GPSDistanceChangeUpdateMeters As Integer = 100</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredAddress</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1012195327</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredAddress As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredAddress As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>GPSDistanceChangeUpdateAddress</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1632245759</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>GPSDistanceChangeUpdateAddress As Integer = 50</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>GPSDistanceChangeUpdateAddress As Integer = 50</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredLastSent</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>655491071</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredLastSent As Double = -1</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredLastSent As Double = -1</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>GPSDistanceChangeUpdateSpeed</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1140729855</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>GPSDistanceChangeUpdateSpeed As Integer = 20</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>GPSDistanceChangeUpdateSpeed As Integer = 20</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>GPSDistanceChangeUpdateSpeedTime</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1881247743</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>GPSDistanceChangeUpdateSpeedTime As Integer = 600</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>GPSDistanceChangeUpdateSpeedTime As Integer = 600</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>GPSDistanceChangeUpdateMetersTime</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1796440063</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>GPSDistanceChangeUpdateMetersTime As Integer = 120</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>GPSDistanceChangeUpdateMetersTime As Integer = 120</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredSpeed</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>371869695</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredSpeed As Double = -1</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredSpeed As Double = -1</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredLatestLat</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2115704831</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredLatestLat As Double = -1</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredLatestLat As Double = -1</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredLatestLong</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2145009663</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredLatestLong As Double = -1</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredLatestLong As Double = -1</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>StoredLatestSpeed</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2093287423</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>StoredLatestSpeed As Double = -1</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>StoredLatestSpeed As Double = -1</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <PropertyVal Name="ThemeMediumColor">0</PropertyVal>
+ <PropertyVal Name="ThemeLightColor">0</PropertyVal>
+ <PropertyVal Name="ThemeDarkColor">0</PropertyVal>
+ <PropertyVal Name="Top">0</PropertyVal>
+ <PropertyVal Name="Left">0</PropertyVal>
+ <PropertyVal Name="Super"></PropertyVal>
+ <PropertyVal Name="Index">-2147483648</PropertyVal>
+ <PropertyVal Name="Name"></PropertyVal>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>BugVersion</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MajorVersion</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MinorVersion</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>NonReleaseVersion</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Version</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ThemeColorName</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ThemeDarkColor</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>&amp;c000000</PropertyValue>
+   <ItemType>Color</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ThemeLightColor</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>&amp;c000000</PropertyValue>
+   <ItemType>Color</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ThemeMediumColor</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>&amp;c000000</PropertyValue>
+   <ItemType>Color</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>AppName</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>SA MDM</PropertyValue>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>isSecure</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>IPAddress</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>mdm.example.com</PropertyValue>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>IPPort</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>8969</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>AppIden</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>HDID</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>IsConnectedPrev</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>IsConnectedSet</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>isEnrol</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Device_SerialNumber</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Device_IMEI</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredLat</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>-1</PropertyValue>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredLong</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>-1</PropertyValue>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>GPSDistanceChangeUpdateMeters</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>100</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredAddress</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>GPSDistanceChangeUpdateAddress</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>50</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredLastSent</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>-1</PropertyValue>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>GPSDistanceChangeUpdateSpeed</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>20</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>GPSDistanceChangeUpdateSpeedTime</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>600</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>GPSDistanceChangeUpdateMetersTime</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>120</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredSpeed</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>-1</PropertyValue>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredLatestLat</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>-1</PropertyValue>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredLatestLong</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>-1</PropertyValue>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>StoredLatestSpeed</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>-1</PropertyValue>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="1512972287">
+ <ObjName>MessageEventReceiver</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>1</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>Constructor</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>28461055</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Constructor()</SourceLine>
+   <SourceLine>GetDeviceDetails = New GetDeviceDetailsTimer</SourceLine>
+   <SourceLine>GetDeviceDetails.Period = 10000</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>SetClassPtr(App.AndroidContextHandle, AddressOf ReturnData)</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>ReturnData</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>876769279</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub ReturnData(ClassName As Ptr, EventName As Ptr, Action As Ptr, Data As Ptr)</SourceLine>
+   <SourceLine>Dim ClassNameStr, EventNameStr, ActionStr, DataStr As String</SourceLine>
+   <SourceLine>Dim isHandled As Boolean = True</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ClassNameStr = ClassName.CString</SourceLine>
+   <SourceLine>EventNameStr = EventName.CString</SourceLine>
+   <SourceLine>ActionStr = Action.CString</SourceLine>
+   <SourceLine>DataStr = Data.CString</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Select Case ClassNameStr</SourceLine>
+   <SourceLine>Case "LOCATION_UPDATE"</SourceLine>
+   <SourceLine>Dim TempLat, TempLong, TempSpeed As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>TempSpeed = DataStr.NthField(":", 2)</SourceLine>
+   <SourceLine>TempLat = DataStr.NthField(":", 1).NthField(",", 1)</SourceLine>
+   <SourceLine>TempLong = DataStr.NthField(":", 1).NthField(",", 2)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//SendLocationUpdate(Val(TempLat), Val(TempLong), Val(TempSpeed))</SourceLine>
+   <SourceLine>Case "PROVISION_EVENT"</SourceLine>
+   <SourceLine>If ActionStr = "PtrInit" Then</SourceLine>
+   <SourceLine>isInit = True</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>app.messageReceiver.GetDeviceDetails.RunMode = Timer.RunModes.Single</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, "Provisioning Init", "True")</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Enrollment" Then</SourceLine>
+   <SourceLine>If DataStr.IsLeftEqual("Enrollment IMEI Received:") Then</SourceLine>
+   <SourceLine>app.Device_IMEI = DataStr.NthField("Enrollment IMEI Received:",2).Trim()</SourceLine>
+   <SourceLine>ElseIf DataStr.IsLeftEqual("Enrollment SN Received:") Then</SourceLine>
+   <SourceLine>app.Device_SerialNumber = DataStr.NthField("Enrollment SN Received:",2).Trim()</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//app.SendDeviceDetails()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Log" Then</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Owner" Then</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>isHandled = False</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Case "ADMIN_EVENT"</SourceLine>
+   <SourceLine>If ActionStr = "PtrInit" Then</SourceLine>
+   <SourceLine>isInit = True</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, "Admin Init", "True")</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Log" Then</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Package" Then</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Owner" Then</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>ElseIf EventNameStr = "ADMIN_EVENT" Then</SourceLine>
+   <SourceLine>HandleAdminEvent(ActionStr, DataStr)</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>isHandled = False</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Case "POLICY_EVENT"</SourceLine>
+   <SourceLine>If EventNameStr = "CHECK_POLICIES" Then</SourceLine>
+   <SourceLine>If ActionStr = "PtrInit" Then</SourceLine>
+   <SourceLine>isInit = True</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, "Policy Init", "True")</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Enrollment" Then</SourceLine>
+   <SourceLine>app.isEnrol = True</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, "Enrollment", DataStr)</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Policy" Then</SourceLine>
+   <SourceLine>SyncAndApplyPolicies(DataStr)</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, "Policy Check", "Send API/TCP Message")</SourceLine>
+   <SourceLine>ElseIf ActionStr = "Log" Then</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, EventNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>isHandled = False</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>isHandled = False</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>isHandled = False</SourceLine>
+   <SourceLine>End Select</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Not isHandled Then</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, ClassNameStr, ActionStr, DataStr)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>ClassName As Ptr, EventName As Ptr, Action As Ptr, Data As Ptr</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>HandleAdminEvent</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2086977535</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub HandleAdminEvent(eventStr As String, data As String)</SourceLine>
+   <SourceLine>Dim QueryName As String</SourceLine>
+   <SourceLine>Dim DataArr(-1) As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>System.DebugLog("Received admin event: " + eventStr + ", Data: " + data)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Select Case eventStr</SourceLine>
+   <SourceLine>Case "DEVICE_ADMIN_ENABLED"</SourceLine>
+   <SourceLine>// Handle admin enabled</SourceLine>
+   <SourceLine>System.DebugLog("Device admin enabled")</SourceLine>
+   <SourceLine>QueryName = "DeviceAdmin"</SourceLine>
+   <SourceLine>DataArr.Add("Enabled")</SourceLine>
+   <SourceLine>Case "DEVICE_ADMIN_DISABLED"</SourceLine>
+   <SourceLine>// Handle admin disabled</SourceLine>
+   <SourceLine>System.DebugLog("Device admin disabled")</SourceLine>
+   <SourceLine>QueryName = "DeviceAdmin"</SourceLine>
+   <SourceLine>DataArr.Add("Disabled")</SourceLine>
+   <SourceLine>Case "PASSWORD_CHANGED"</SourceLine>
+   <SourceLine>// Handle password change</SourceLine>
+   <SourceLine>System.DebugLog("Password changed for user: " + data)</SourceLine>
+   <SourceLine>QueryName = "PasswordChanged"</SourceLine>
+   <SourceLine>DataArr.Add(data)</SourceLine>
+   <SourceLine>Case "PASSWORD_FAILED"</SourceLine>
+   <SourceLine>// Handle password failure</SourceLine>
+   <SourceLine>System.DebugLog("Password attempt failed")</SourceLine>
+   <SourceLine>QueryName = "PasswordFailed"</SourceLine>
+   <SourceLine>DataArr.Add("")</SourceLine>
+   <SourceLine>Case "LOCK_TASK_ENTERING"</SourceLine>
+   <SourceLine>// Handle kiosk mode entry</SourceLine>
+   <SourceLine>System.DebugLog("Entering lock task mode: " + data)</SourceLine>
+   <SourceLine>QueryName = "KioskEnter"</SourceLine>
+   <SourceLine>DataArr.Add(data)</SourceLine>
+   <SourceLine>Case "LOCK_TASK_EXITING"</SourceLine>
+   <SourceLine>// Handle kiosk mode exit</SourceLine>
+   <SourceLine>System.DebugLog("Exiting lock task mode")</SourceLine>
+   <SourceLine>QueryName = "KioskExit"</SourceLine>
+   <SourceLine>DataArr.Add("")</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>System.DebugLog("Unknown event: " + eventStr)</SourceLine>
+   <SourceLine>QueryName = "Unknown Event"</SourceLine>
+   <SourceLine>DataArr.Add(eventStr)</SourceLine>
+   <SourceLine>End Select</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, "ADMIN_EVENT", eventStr, data)</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>eventStr As String, data As String</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>SyncAndApplyPolicies</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>427409407</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub SyncAndApplyPolicies(deviceId As String)</SourceLine>
+   <SourceLine>System.DebugLog("Syncing policies for device: " + deviceId)</SourceLine>
+   <SourceLine>// Add policy fetch and apply logic here</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//SAAPICreateMessageClass(Self, "in_Receive", "", Nil, "GetPolicies", Array(deviceId))</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>CollectPolicies()</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>deviceId As String</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>TimerGetDeviceDetails</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>695603199</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub TimerGetDeviceDetails()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>33</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Property>
+  <ItemName>receiver</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>97660927</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>receiver As Ptr</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>receiver As Ptr</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>isInit</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1375283199</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>isInit As Boolean = False</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>isInit As Boolean = False</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>GetDeviceDetails</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>349685759</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>GetDeviceDetails As GetDeviceDetailsTimer</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>GetDeviceDetails As GetDeviceDetailsTimer</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>isInit</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="693759999">
+ <ObjName>GetDeviceDetailsTimer</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>1</IsClass>
+ <Superclass>Timer</Superclass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <HookInstance>
+  <ItemName>Run</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>596635647</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Run()</SourceLine>
+   <SourceLine>If app.Device_SerialNumber = "" Or app.Device_SerialNumber = "Failed to get SN" Or _</SourceLine>
+   <SourceLine>app.Device_IMEI = "" Or app.Device_IMEI = "Failed to get IMEI" Then</SourceLine>
+   <SourceLine>//app.SendDeviceDetails()</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>Me.RunMode = Timer.RunModes.Off</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Enabled</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Period</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>1000</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>RunMode</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>2</PropertyValue>
+   <ItemType>Timer.RunModes</ItemType>
+   <EditorType>Enum</EditorType>
+   <Enumeration>
+    <ItemDef>0 - Off</ItemDef>
+    <ItemDef>1 - Single</ItemDef>
+    <ItemDef>2 - Multiple</ItemDef>
+   </Enumeration>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="620339199">
+ <ObjName>AndroidXojoMDM</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>0</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <ExternalMethod>
+  <ItemName>GetHardwareID</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1139439615</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Function GetHardwareID Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "getHardwareID" (context As Ptr) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>getHardwareID</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>startPolicyService</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1381326847</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Sub startPolicyService Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "startPolicyServiceClass" (context As Ptr)</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>startPolicyServiceClass</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult></ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>applyPolicies</ItemName>
+  <Compatibility>(TargetConsole and (Target32Bit or Target64Bit)) or  (TargetWeb and (Target32Bit or Target64Bit)) or  (TargetDesktop and (Target32Bit or Target64Bit)) or  (TargetIOS and (Target64Bit)) or  (TargetAndroid and (Target64Bit))</Compatibility>
+  <Visible>1</Visible>
+  <PartID>1044414463</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Sub applyPolicies Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "applyPolicies" (context As Ptr, idJson As CString, policyJson As CString)</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>applyPolicies</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr, idJson As CString, policyJson As CString</ItemParams>
+  <ItemResult></ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>requestDeviceAdmin</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1798680575</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Sub requestDeviceAdmin Lib "com.example.mdmandroidagent.SAAndroidExtraClass" (context As Ptr)</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult></ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>GetInstalledUserApps</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1399646207</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Function GetInstalledUserApps Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "getInstalledUserApps" (context As Ptr) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>getInstalledUserApps</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>promptInstallUnknownApps</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>194848767</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Sub promptInstallUnknownApps Lib "com.example.mdmandroidagent.SAAndroidExtraClass" (context As Ptr)</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult></ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <Method>
+  <ItemName>CollectPolicies</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>908107775</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub CollectPolicies()</SourceLine>
+   <SourceLine>Dim JSONStr As New JSONItem</SourceLine>
+   <SourceLine>Dim JSONIDStr As New JSONItem</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Not IsNull(app.PolicyDic) Then</SourceLine>
+   <SourceLine>If app.PolicyDic.KeyCount &gt; 0 Then</SourceLine>
+   <SourceLine>For Each KeyName As String In app.PolicyDic.Keys</SourceLine>
+   <SourceLine>JSONStr.Value(KeyName) = app.PolicyDic.Value(KeyName)</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine>app.PolicyDic.RemoveAll()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Not IsNull(app.PolicyIDDic) Then</SourceLine>
+   <SourceLine>If app.PolicyIDDic.KeyCount &gt; 0 Then</SourceLine>
+   <SourceLine>For Each KeyName As String In app.PolicyIDDic.Keys</SourceLine>
+   <SourceLine>JSONIDStr.Value(KeyName) = app.PolicyIDDic.Value(KeyName)</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine>app.PolicyIDDic.RemoveAll()</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//Dim DataStr As String = JSONStr.ToString()</SourceLine>
+   <SourceLine>//Dim DataPtr As Ptr = AddressOf DataStr</SourceLine>
+   <SourceLine>ScreenAddEvent(DateTime.Now.SQLDateTime, "Add Policy", "Policy", JSONIDStr.ToString() + ASCII_NewLine + JSONStr.ToString())</SourceLine>
+   <SourceLine>applyPolicies(app.AndroidContextHandle, JSONIDStr.ToString(), JSONStr.ToString())</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//{</SourceLine>
+   <SourceLine>//"disableCamera": True,</SourceLine>
+   <SourceLine>//"restrictNetwork": { "wifi": True, "mobileData": False },</SourceLine>
+   <SourceLine>//"passwordPolicy": { "quality": "alphanumeric", "minLength": 8 },</SourceLine>
+   <SourceLine>//"hideApp": "com.example.app",</SourceLine>
+   <SourceLine>//"restrictPermission": { "package": "com.example.app", "permission": "CAMERA" },</SourceLine>
+   <SourceLine>//"setTempPin": "1234",</SourceLine>
+   <SourceLine>//"frpPolicy": { "enabled": True, "adminEmail": "admin@example.com" },</SourceLine>
+   <SourceLine>//"restrictBluetooth": True,</SourceLine>
+   <SourceLine>//"restrictUSB": True,</SourceLine>
+   <SourceLine>//"updatePolicy": { "type": "window", "start": "00:00", "end": "06:00" },</SourceLine>
+   <SourceLine>//"userId": 10</SourceLine>
+   <SourceLine>//"wifiConfig": {</SourceLine>
+   <SourceLine>//"ssid": "MyWiFi",</SourceLine>
+   <SourceLine>//"password": "SecurePass123",</SourceLine>
+   <SourceLine>//"security": "WPA"</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <ExternalMethod>
+  <ItemName>generateRSAKeyPair</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2132971519</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Soft Declare Function generateRSAKeyPair Lib "com.example.mdmandroidagent.SAAndroidExtraClass" (keySize As Int32) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>keySize As Int32</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>1</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <Method>
+  <ItemName>AndroidAESDecrypt</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>717492223</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function AndroidAESDecrypt(Password As String, Data As String) As String</SourceLine>
+   <SourceLine>Dim IVStr As String</SourceLine>
+   <SourceLine>Dim DataStr As String</SourceLine>
+   <SourceLine>Dim PassStr As String</SourceLine>
+   <SourceLine>Dim ReturnData As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>IVStr = Data.NthField("|#|",1) //EncodeBase64(Data.NthField("|#|",1), 0)</SourceLine>
+   <SourceLine>DataStr = Data.NthField("|#|",2) //EncodeBase64(Data.NthField("|#|",2), 0)</SourceLine>
+   <SourceLine>Password = Crypto.SHA2_256(Password)</SourceLine>
+   <SourceLine>PassStr = EncodeBase64(Password, 0)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Data = Data.DefineEncoding(Encodings.UTF8)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ReturnData = AndroiddecryptAESCBC(DataStr, PassStr, IVStr)</SourceLine>
+   <SourceLine>//ReturnData = DecodeBase64(ReturnData)</SourceLine>
+   <SourceLine>//ReturnData = ReturnData.DefineEncoding(Encodings.UTF8)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//System.DebugLog("Decrypt: " + DataStr + " - " + Password + " - " + IVStr + " - " + ReturnData)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return ReturnData</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Password As String, Data As String</ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>AndroidAESEncrypt</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1657092095</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function AndroidAESEncrypt(Password As String, Data As String) As String</SourceLine>
+   <SourceLine>Dim IVMem As MemoryBlock</SourceLine>
+   <SourceLine>Dim IVStr As String</SourceLine>
+   <SourceLine>Dim ReturnData As String</SourceLine>
+   <SourceLine>Dim PassStr As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>IVMem = Crypto.GenerateRandomBytes(16)</SourceLine>
+   <SourceLine>IVStr = IVMem.StringValue(0, IVMem.Size)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//System.DebugLog("Encrypt: " + Data + " - " + Password + " - " + IVStr)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>IVStr = EncodeBase64(IVStr, 0)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Password = Crypto.SHA2_256(Password)</SourceLine>
+   <SourceLine>PassStr = EncodeBase64(Password, 0)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ReturnData = AndroidencryptAESCBC(Data, PassStr, IVStr)</SourceLine>
+   <SourceLine>ReturnData = IVStr + "|#|" + ReturnData</SourceLine>
+   <SourceLine>ReturnData = ReturnData.DefineEncoding(Encodings.UTF8)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return ReturnData</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Password As String, Data As String</ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <ExternalMethod>
+  <ItemName>AndroidencryptAESCBC</ItemName>
+  <Compatibility>(TargetConsole and (Target32Bit or Target64Bit)) or  (TargetWeb and (Target32Bit or Target64Bit)) or  (TargetDesktop and (Target32Bit or Target64Bit)) or  (TargetIOS and (Target64Bit)) or  (TargetAndroid and (Target64Bit))</Compatibility>
+  <Visible>1</Visible>
+  <PartID>1556516863</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Function AndroidencryptAESCBC Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "encryptAESCBC" (Data As CString, Key As CString, IV As CString) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>encryptAESCBC</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Data As CString, Key As CString, IV As CString</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>AndroiddecryptAESCBC</ItemName>
+  <Compatibility>(TargetConsole and (Target32Bit or Target64Bit)) or  (TargetWeb and (Target32Bit or Target64Bit)) or  (TargetDesktop and (Target32Bit or Target64Bit)) or  (TargetIOS and (Target64Bit)) or  (TargetAndroid and (Target64Bit))</Compatibility>
+  <Visible>1</Visible>
+  <PartID>2030221311</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Function AndroiddecryptAESCBC Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "decryptAESCBC" (Data As CString, Key As CString, IV As CString) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>decryptAESCBC</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Data As CString, Key As CString, IV As CString</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <Method>
+  <ItemName>StartCommand</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1629100031</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function StartCommand(CommandFrom As String, CommandID As String, CommandName As String, CommandData As String) As String</SourceLine>
+   <SourceLine>Dim ReturnData(-1) As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//{</SourceLine>
+   <SourceLine>//"disableCamera": True,</SourceLine>
+   <SourceLine>//"restrictNetwork": { "wifi": True, "mobileData": False },</SourceLine>
+   <SourceLine>//"passwordPolicy": { "quality": "alphanumeric", "minLength": 8 },</SourceLine>
+   <SourceLine>//"hideApp": "com.example.app",</SourceLine>
+   <SourceLine>//"restrictPermission": { "package": "com.example.app", "permission": "CAMERA" },</SourceLine>
+   <SourceLine>//"setTempPin": "1234",</SourceLine>
+   <SourceLine>//"frpPolicy": { "enabled": True, "adminEmail": "admin@example.com" },</SourceLine>
+   <SourceLine>//"restrictBluetooth": True,</SourceLine>
+   <SourceLine>//"restrictUSB": True,</SourceLine>
+   <SourceLine>//"updatePolicy": { "type": "window", "start": "00:00", "end": "06:00" },</SourceLine>
+   <SourceLine>//"userId": 10</SourceLine>
+   <SourceLine>//"wifiConfig": {</SourceLine>
+   <SourceLine>//"ssid": "MyWiFi",</SourceLine>
+   <SourceLine>//"password": "SecurePass123",</SourceLine>
+   <SourceLine>//"security": "WPA"</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim CommandIDArr(-1) As String</SourceLine>
+   <SourceLine>Dim CommandsArr(-1) As String</SourceLine>
+   <SourceLine>Dim CommandDataArr(-1) As String</SourceLine>
+   <SourceLine>Dim CMDID As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>CommandIDArr = CommandID.ToArray(MessageDataDelimiter)</SourceLine>
+   <SourceLine>CommandsArr = CommandName.ToArray(MessageDataDelimiter)</SourceLine>
+   <SourceLine>CommandDataArr = CommandData.ToArray(MessageDataDelimiter)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>For i As Integer = 0 To CommandsArr.LastIndex</SourceLine>
+   <SourceLine>If CommandIDArr.LastIndex = -1 Then</SourceLine>
+   <SourceLine>CMDID = GenVariableUUID(MSGUUIDLength)</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>CMDID = CommandIDArr(i)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If CommandDataArr.LastIndex = -1 Then</SourceLine>
+   <SourceLine>ReturnData.Add(StartCommand_Int(CommandFrom, CMDID, CommandsArr(i), ""))</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>ReturnData.Add(StartCommand_Int(CommandFrom, CMDID, CommandsArr(i), CommandDataArr(i)))</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>CollectPolicies()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return String.FromArray(ReturnData, MessageDataDelimiter)</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>CommandFrom As String, CommandID As String, CommandName As String, CommandData As String</ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>StartCommand_Int</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1983186943</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function StartCommand_Int(CommandFrom As String, CommandID As String, CommandName As String, CommandData As String) As String</SourceLine>
+   <SourceLine>#Pragma Unused CommandFrom</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim ReturnData As String</SourceLine>
+   <SourceLine>Dim AndroidCMDName As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//{</SourceLine>
+   <SourceLine>//"disableCamera": True,</SourceLine>
+   <SourceLine>//"restrictNetwork": { "wifi": True, "mobileData": False },</SourceLine>
+   <SourceLine>//"passwordPolicy": { "quality": "alphanumeric", "minLength": 8 },</SourceLine>
+   <SourceLine>//"hideApp": "com.example.app",</SourceLine>
+   <SourceLine>//"restrictPermission": { "package": "com.example.app", "permission": "CAMERA" },</SourceLine>
+   <SourceLine>//"setTempPin": "1234",</SourceLine>
+   <SourceLine>//"frpPolicy": { "enabled": True, "adminEmail": "admin@example.com" },</SourceLine>
+   <SourceLine>//"restrictBluetooth": True,</SourceLine>
+   <SourceLine>//"restrictUSB": True,</SourceLine>
+   <SourceLine>//"updatePolicy": { "type": "window", "start": "00:00", "end": "06:00" },</SourceLine>
+   <SourceLine>//"userId": 10</SourceLine>
+   <SourceLine>//"wifiConfig": {</SourceLine>
+   <SourceLine>//"ssid": "MyWiFi",</SourceLine>
+   <SourceLine>//"password": "SecurePass123",</SourceLine>
+   <SourceLine>//"security": "WPA"</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Select Case CommandName</SourceLine>
+   <SourceLine>Case "Admin"</SourceLine>
+   <SourceLine>requestDeviceAdmin(app.AndroidContextHandle)</SourceLine>
+   <SourceLine>ReturnData = "Admin"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "Lock" </SourceLine>
+   <SourceLine>app.PolicyDic.Value("lockNow") = True</SourceLine>
+   <SourceLine>ReturnData = "LockNow" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "lockNow"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "Unlock"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("unlock") = True</SourceLine>
+   <SourceLine>ReturnData = "Unlock" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "unlock"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "Wipe" </SourceLine>
+   <SourceLine>app.PolicyDic.Value("wipeData") = True</SourceLine>
+   <SourceLine>ReturnData = "WipeData" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "wipeData"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "OpenApp"</SourceLine>
+   <SourceLine>If CommandData = "" Then</SourceLine>
+   <SourceLine>CommandData = "MainApp"</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>app.PolicyDic.Value("openApp") = CommandData</SourceLine>
+   <SourceLine>ReturnData = "OpenApp" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "openApp"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "EnterKiosk" </SourceLine>
+   <SourceLine>If CommandData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>app.PolicyDic.Value("enterKiosk") = CommandData</SourceLine>
+   <SourceLine>ReturnData = "EnterKiosk" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "enterKiosk"</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "ExitKiosk" </SourceLine>
+   <SourceLine>app.PolicyDic.Value("exitKiosk") = True</SourceLine>
+   <SourceLine>ReturnData = "ExitKiosk" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "exitKiosk"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "UnknownApps"</SourceLine>
+   <SourceLine>promptInstallUnknownApps(app.AndroidContextHandle)</SourceLine>
+   <SourceLine>ReturnData = "Unknown Apps" + MessageDelimiter + ""</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "Install" </SourceLine>
+   <SourceLine>If CommandData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>Dim installConfigs() As Dictionary</SourceLine>
+   <SourceLine>Dim installDic As New Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>CommandData = DecodeBase64(CommandData)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If app.PolicyDic.HasKey("installApp") Then</SourceLine>
+   <SourceLine>installConfigs = app.PolicyDic.Value("installApp")</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>installDic.Value("msgid") = CommandID</SourceLine>
+   <SourceLine>installDic.Value("path") = CommandData</SourceLine>
+   <SourceLine>installConfigs.Add(installDic)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>app.PolicyDic.Value("installApp") = installConfigs</SourceLine>
+   <SourceLine>ReturnData = "installApp" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "installApp"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If app.PolicyIDDic.HasKey(AndroidCMDName) Then</SourceLine>
+   <SourceLine>CommandID = app.PolicyIDDic.Value(AndroidCMDName) + "!" + CommandID</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "Uninstall" </SourceLine>
+   <SourceLine>If CommandData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>app.PolicyDic.Value("removeApp") = CommandData</SourceLine>
+   <SourceLine>ReturnData = "Remove App" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "removeApp"</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "UninstallRefresh"</SourceLine>
+   <SourceLine>Dim ReturnDataStr As String</SourceLine>
+   <SourceLine>Dim ReturnDataArr(-1) As String</SourceLine>
+   <SourceLine>Dim jsonArray() As Variant</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//[{"packageName": "com.example.mdmandroidagent", "label": "MDM Android Agent", "version": "1.0.0"}]</SourceLine>
+   <SourceLine>ReturnDataStr = GetInstalledUserApps(App.AndroidContextHandle)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>jsonArray = ParseJSON(ReturnDataStr)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ReturnData = "APPS:"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>For Each d As Dictionary In jsonArray</SourceLine>
+   <SourceLine>If d.HasKey("label") And d.HasKey("packageName") Then</SourceLine>
+   <SourceLine>ReturnDataArr.Add(d.Value("label").StringValue + MessageDelimiter + d.Value("packageName").StringValue)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ReturnData = ReturnData + String.FromArray(ReturnDataArr, MessageDataDelimiter)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "DisableCamera"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("disableCamera") = True</SourceLine>
+   <SourceLine>ReturnData = "DisableCamera" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "disableCamera"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "EnableCamera"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("disableCamera") = False</SourceLine>
+   <SourceLine>ReturnData = "DisableCamera" + MessageDelimiter + "False"</SourceLine>
+   <SourceLine>AndroidCMDName = "disableCamera"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "RestrictNetwork" </SourceLine>
+   <SourceLine>Dim networkDic As New Dictionary</SourceLine>
+   <SourceLine>networkDic.Value("wifi") = False</SourceLine>
+   <SourceLine>networkDic.Value("mobileData") = True</SourceLine>
+   <SourceLine>app.PolicyDic.Value("restrictNetwork") = networkDic</SourceLine>
+   <SourceLine>ReturnData = "RestrictNetwork" + MessageDelimiter + "wifi:True, mobileData:False"</SourceLine>
+   <SourceLine>AndroidCMDName = "restrictNetwork"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "SetPasswordPolicy" </SourceLine>
+   <SourceLine>Dim pwDic As New Dictionary</SourceLine>
+   <SourceLine>pwDic.Value("quality") = "alphanumeric"</SourceLine>
+   <SourceLine>pwDic.Value("minLength") = 8</SourceLine>
+   <SourceLine>app.PolicyDic.Value("passwordPolicy") = pwDic</SourceLine>
+   <SourceLine>ReturnData = "PasswordPolicy" + MessageDelimiter + "quality:alphanumeric, minLength:8"</SourceLine>
+   <SourceLine>AndroidCMDName = "passwordPolicy"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "HideApp" </SourceLine>
+   <SourceLine>If CommandData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>app.PolicyDic.Value("hideApp") = CommandData</SourceLine>
+   <SourceLine>ReturnData = "HideApp" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "hideApp"</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "RestrictPermission" </SourceLine>
+   <SourceLine>Dim permDic As New Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If CommandData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>permDic.Value("package") = CommandData.NthField(MessageSubDataDelimiter, 1)</SourceLine>
+   <SourceLine>permDic.Value("permission") = CommandData.NthField(MessageSubDataDelimiter, 2)</SourceLine>
+   <SourceLine>app.PolicyDic.Value("restrictPermission") = permDic</SourceLine>
+   <SourceLine>ReturnData = "RestrictPermission" + MessageDelimiter + "package:" + CommandData.NthField(MessageSubDataDelimiter, 1) + _</SourceLine>
+   <SourceLine>", permission:" + CommandData.NthField(MessageSubDataDelimiter, 2)</SourceLine>
+   <SourceLine>AndroidCMDName = "restrictPermission"</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "SetTempPin" </SourceLine>
+   <SourceLine>app.PolicyDic.Value("setTempPin") = "1234"</SourceLine>
+   <SourceLine>ReturnData = "SetTempPin" + MessageDelimiter + "1234"</SourceLine>
+   <SourceLine>AndroidCMDName = "setTempPin"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "ClearPin" </SourceLine>
+   <SourceLine>app.PolicyDic.Value("clearPin") = True</SourceLine>
+   <SourceLine>ReturnData = "ClearPin" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "clearPin"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "SetFRP" </SourceLine>
+   <SourceLine>Dim frpDic As New Dictionary</SourceLine>
+   <SourceLine>frpDic.Value("enabled") = True</SourceLine>
+   <SourceLine>frpDic.Value("adminEmail") = CommandData</SourceLine>
+   <SourceLine>app.PolicyDic.Value("frpPolicy") = frpDic</SourceLine>
+   <SourceLine>ReturnData = "FRPPolicy" + MessageDelimiter + "enabled:True, adminEmail:" + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "frpPolicy"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "UnSetFRP" </SourceLine>
+   <SourceLine>Dim frpDic As New Dictionary</SourceLine>
+   <SourceLine>frpDic.Value("enabled") = False</SourceLine>
+   <SourceLine>If CommandData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>frpDic.Value("adminEmail") = CommandData</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>app.PolicyDic.Value("frpPolicy") = frpDic</SourceLine>
+   <SourceLine>ReturnData = "FRPPolicy" + MessageDelimiter + "enabled:False, adminEmail:" + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "frpPolicy"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "RestrictBluetooth"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("restrictBluetooth") = True</SourceLine>
+   <SourceLine>ReturnData = "RestrictBluetooth" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "restrictBluetooth"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "RestrictUSB"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("restrictUSB") = True</SourceLine>
+   <SourceLine>ReturnData = "RestrictUSB" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "restrictUSB"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "SetUpdatePolicy"</SourceLine>
+   <SourceLine>Dim updateDic As New Dictionary</SourceLine>
+   <SourceLine>updateDic.Value("type") = "window"</SourceLine>
+   <SourceLine>updateDic.Value("start") = CommandData.NthField(MessageSubDataDelimiter, 1) //"00:00"</SourceLine>
+   <SourceLine>updateDic.Value("end") = CommandData.NthField(MessageSubDataDelimiter, 2) //"06:00"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("updatePolicy") = updateDic</SourceLine>
+   <SourceLine>ReturnData = "UpdatePolicy" + MessageDelimiter + "type:window, start:" + _</SourceLine>
+   <SourceLine>CommandData.NthField(MessageSubDataDelimiter, 1) + ", end:" + CommandData.NthField(MessageSubDataDelimiter, 2)</SourceLine>
+   <SourceLine>AndroidCMDName = "updatePolicy"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "ConfigureWifi"</SourceLine>
+   <SourceLine>Dim wifiConfigs() As Dictionary</SourceLine>
+   <SourceLine>Dim wifiDic As New Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If app.PolicyDic.HasKey("wifiConfig") Then</SourceLine>
+   <SourceLine>wifiConfigs = app.PolicyDic.Value("wifiConfig")</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>wifiDic.Value("msgid") = CommandID</SourceLine>
+   <SourceLine>wifiDic.Value("ssid") = CommandData.NthField(MessageSubDataDelimiter, 1) //"MyWiFi"</SourceLine>
+   <SourceLine>wifiDic.Value("password") = CommandData.NthField(MessageSubDataDelimiter, 2) //"SecurePass123"</SourceLine>
+   <SourceLine>wifiDic.Value("security") = CommandData.NthField(MessageSubDataDelimiter, 3) //"WPA"</SourceLine>
+   <SourceLine>wifiConfigs.Add(wifiDic)</SourceLine>
+   <SourceLine>app.PolicyDic.Value("wifiConfig") = wifiConfigs</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ReturnData = "WifiConfig" + MessageDelimiter + "ssid:" + CommandData.NthField(MessageSubDataDelimiter, 1) + _</SourceLine>
+   <SourceLine>", security:" + CommandData.NthField(MessageSubDataDelimiter, 3)</SourceLine>
+   <SourceLine>AndroidCMDName = "wifiConfig"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If app.PolicyIDDic.HasKey(AndroidCMDName) Then</SourceLine>
+   <SourceLine>CommandID = app.PolicyIDDic.Value(AndroidCMDName) + "!" + CommandID</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "ClearAllNotifications"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("clearAllNotifications") = True</SourceLine>
+   <SourceLine>ReturnData = "ClearAllNotifications" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "clearAllNotifications"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "LockRotation" //True = Portrait</SourceLine>
+   <SourceLine>Dim LockRotationDic As New Dictionary</SourceLine>
+   <SourceLine>LockRotationDic.Value("Rotation") = StringToBool(CommandData.NthField(MessageSubDataDelimiter, 1))</SourceLine>
+   <SourceLine>LockRotationDic.Value("packageName") = CommandDatA.NthField(MessageSubDataDelimiter, 2)</SourceLine>
+   <SourceLine>app.PolicyDic.Value("lockRotation") = LockRotationDic</SourceLine>
+   <SourceLine>ReturnData = "LockRotation" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "lockRotation"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "UnlockRotation"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("unlockRotation") = True</SourceLine>
+   <SourceLine>ReturnData = "UnlockRotation" + MessageDelimiter + "True"</SourceLine>
+   <SourceLine>AndroidCMDName = "unlockRotation"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "USBDebug"</SourceLine>
+   <SourceLine>Dim USBDebugDic As New Dictionary</SourceLine>
+   <SourceLine>USBDebugDic.Value("packageName") = CommandData</SourceLine>
+   <SourceLine>app.PolicyDic.Value("USBDebug") = USBDebugDic</SourceLine>
+   <SourceLine>ReturnData = "USBDebug" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "USBDebug"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "updateApp"</SourceLine>
+   <SourceLine>If CommandData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>Dim updateConfigs() As Dictionary</SourceLine>
+   <SourceLine>Dim updateDic As New Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>CommandData = DecodeBase64(CommandData)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If app.PolicyDic.HasKey("updateApp") Then</SourceLine>
+   <SourceLine>updateConfigs = app.PolicyDic.Value("updateApp")</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>updateDic.Value("msgid") = CommandID</SourceLine>
+   <SourceLine>updateDic.Value("path") = CommandData</SourceLine>
+   <SourceLine>updateConfigs.Add(updateDic)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>app.PolicyDic.Value("updateApp") = updateConfigs</SourceLine>
+   <SourceLine>ReturnData = "updateApp" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "updateApp"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If app.PolicyIDDic.HasKey(AndroidCMDName) Then</SourceLine>
+   <SourceLine>CommandID = app.PolicyIDDic.Value(AndroidCMDName) + "!" + CommandID</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "ScreenLockTimeout"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("screenLockTimeout") = CommandData</SourceLine>
+   <SourceLine>ReturnData = "screenLockTimeout" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "screenLockTimeout"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Case "ThemeMode"</SourceLine>
+   <SourceLine>app.PolicyDic.Value("themeMode") = CommandData</SourceLine>
+   <SourceLine>ReturnData = "ThemeMode" + MessageDelimiter + CommandData</SourceLine>
+   <SourceLine>AndroidCMDName = "themeMode"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>ReturnData = "Error - No Such Command: " + CommandID + " - " + CommandName + ":" + CommandData</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>End Select</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If AndroidCMDName &lt;&gt; "" Then</SourceLine>
+   <SourceLine>app.PolicyIDDic.Value(AndroidCMDName) = CommandID</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return ReturnData</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>33</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>CommandFrom As String, CommandID As String, CommandName As String, CommandData As String</ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <ExternalMethod>
+  <ItemName>SetClassPtr</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>585639935</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Sub SetClassPtr Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "setAdminPtr" (ConObj As Ptr, Obj As Ptr)</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>setAdminPtr</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>ConObj As Ptr, Obj As Ptr</ItemParams>
+  <ItemResult></ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <Method>
+  <ItemName>ScreenAddEvent</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2050777087</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub ScreenAddEvent(DateTimeStr As String, EventName As String, ActionStr As String, Data As String)</SourceLine>
+   <SourceLine>If IsNull(Screen_Main) Then</SourceLine>
+   <SourceLine>TempScreenEvents.Add(String.FromArray(Array(DateTimeStr, EventName, ActionStr, Data), MessageStructureDelimiter))</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>Screen_Main.AddEvent(DateTimeStr, EventName, ActionStr, Data)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>DateTimeStr As String, EventName As String, ActionStr As String, Data As String</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <ExternalMethod>
+  <ItemName>ResolveHostname</ItemName>
+  <Compatibility>(TargetConsole and (Target32Bit or Target64Bit)) or  (TargetWeb and (Target32Bit or Target64Bit)) or  (TargetDesktop and (Target32Bit or Target64Bit)) or  (TargetIOS and (Target64Bit)) or  (TargetAndroid and (Target64Bit))</Compatibility>
+  <Visible>1</Visible>
+  <PartID>79992831</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Function ResolveHostname Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "resolveHostname" (policyJson As CString) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>resolveHostname</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>policyJson As CString</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>SetAndroidTCPConnected</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>800589823</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Sub SetAndroidTCPConnected Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "setTCPConnected" (Connected As Boolean)</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>setTCPConnected</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Connected As Boolean</ItemParams>
+  <ItemResult></ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>BringMainScreenToForeground</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>447352831</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Sub BringMainScreenToForeground Lib "com.example.mdmandroidagent.SAAndroidExtraClass" Alias "bringMainScreenToForeground" (context As Ptr)</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>bringMainScreenToForeground</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult></ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SAAndroidExtraClass</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <Method>
+  <ItemName>LoadAndroidApp</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>985933823</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub LoadAndroidApp()</SourceLine>
+   <SourceLine>Dim IsAppLoaded As Boolean</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//If Not IsNull(Screen_Main) And app.isEnrol Then</SourceLine>
+   <SourceLine>IsAppLoaded = True</SourceLine>
+   <SourceLine>//End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If IsNull(app.LoginInfo) Then</SourceLine>
+   <SourceLine>app.LoginInfo = New Dictionary</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>If IsNull(app.PolicyDic) Then</SourceLine>
+   <SourceLine>app.PolicyDic = New Dictionary</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>If IsNull(app.PolicyIDDic) Then</SourceLine>
+   <SourceLine>app.PolicyIDDic = New Dictionary</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If IsNull(app.messageReceiver) Then</SourceLine>
+   <SourceLine>app.messageReceiver = New MessageEventReceiver</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If app.Device_IMEI = "" Or app.Device_IMEI = "Faile to get IMEI" Then</SourceLine>
+   <SourceLine>app.Device_IMEI = GetDeviceIMEI(App.AndroidContextHandle)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>If app.Device_SerialNumber = "" Or app.Device_SerialNumber = "Faile to get SN" Then</SourceLine>
+   <SourceLine>app.Device_SerialNumber = GetDeviceSN(App.AndroidContextHandle)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If IsAppLoaded Then</SourceLine>
+   <SourceLine>If Not HasBeenInit Then</SourceLine>
+   <SourceLine>HasBeenInit = True</SourceLine>
+   <SourceLine>BringMainScreenToForeground(App.AndroidContextHandle)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <ExternalMethod>
+  <ItemName>GetDeviceSN</ItemName>
+  <Compatibility>(TargetConsole and (Target32Bit or Target64Bit)) or  (TargetWeb and (Target32Bit or Target64Bit)) or  (TargetDesktop and (Target32Bit or Target64Bit)) or  (TargetIOS and (Target64Bit)) or  (TargetAndroid and (Target64Bit))</Compatibility>
+  <Visible>1</Visible>
+  <PartID>1065496575</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Function GetDeviceSN Lib "com.example.mdmandroidagent.SADeviceAdminReceiver" Alias "getDeviceSN" (context As Ptr) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>getDeviceSN</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SADeviceAdminReceiver</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <ExternalMethod>
+  <ItemName>GetDeviceIMEI</ItemName>
+  <Compatibility>(TargetConsole and (Target32Bit or Target64Bit)) or  (TargetWeb and (Target32Bit or Target64Bit)) or  (TargetDesktop and (Target32Bit or Target64Bit)) or  (TargetIOS and (Target64Bit)) or  (TargetAndroid and (Target64Bit))</Compatibility>
+  <Visible>1</Visible>
+  <PartID>1635538943</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Declare Function GetDeviceIMEI Lib "com.example.mdmandroidagent.SADeviceAdminReceiver" Alias "getDeviceIMEI" (context As Ptr) As CString</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName>getDeviceIMEI</AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>context As Ptr</ItemParams>
+  <ItemResult>CString</ItemResult>
+  <LibraryName>com.example.mdmandroidagent.SADeviceAdminReceiver</LibraryName>
+  <SoftLink>0</SoftLink>
+  <ObjectiveC>0</ObjectiveC>
+ </ExternalMethod>
+ <Property>
+  <ItemName>TempScreenEvents()</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1211924479</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>TempScreenEvents() As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>TempScreenEvents() As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>SavedDataLines()</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1531496447</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>SavedDataLines() As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>SavedDataLines() As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>SavedDataLinesLimit</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>713297919</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>SavedDataLinesLimit As Integer = 100</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>SavedDataLinesLimit As Integer = 100</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>LastScreenStatusData</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1591760895</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>LastScreenStatusData As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>LastScreenStatusData As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>HasBeenInit</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>594733055</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>HasBeenInit As Boolean = False</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>HasBeenInit As Boolean = False</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>SavedDataLinesLimit</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>100</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>LastScreenStatusData</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>HasBeenInit</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="2132246527">
+ <ObjName>GlobalVars</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>0</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Property>
+  <ItemName>MSGUUIDLength</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1673213951</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>MSGUUIDLength As Integer = 20</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>MSGUUIDLength As Integer = 20</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>MessageDelimiter</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>959954943</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>MessageDelimiter As String = "{+}"</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>MessageDelimiter As String = "{+}"</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>MessageDataDelimiter</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>141916159</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>MessageDataDelimiter As String = "{=}"</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>MessageDataDelimiter As String = "{=}"</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>MessageSubDataDelimiter</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1163098111</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>MessageSubDataDelimiter As String = "{:-:}"</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>MessageSubDataDelimiter As String = "{:-:}"</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>MessageStructureDelimiter</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1448828927</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>MessageStructureDelimiter As String = "{/}"</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>MessageStructureDelimiter As String = "{/}"</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MSGUUIDLength</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>20</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MessageDelimiter</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>{+}</PropertyValue>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MessageDataDelimiter</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>{=}</PropertyValue>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MessageSubDataDelimiter</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>{=}</PropertyValue>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MessageStructureDelimiter</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>{/}</PropertyValue>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="2145044479">
+ <ObjName>GlobalMethods</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>0</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>PrintFile</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1559894015</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub PrintFile(Line As String, IsError As Boolean, IsVerbose As Boolean = False, IsDebugOnly As Boolean = False)</SourceLine>
+   <SourceLine>#Pragma Unused Line</SourceLine>
+   <SourceLine>#Pragma Unused IsError</SourceLine>
+   <SourceLine>#Pragma Unused IsVerbose</SourceLine>
+   <SourceLine>#Pragma Unused IsDebugOnly</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Line As String, IsError As Boolean, IsVerbose As Boolean = False, IsDebugOnly As Boolean = False</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>EncryptAES</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1561559039</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function EncryptAES(Password As String, Data As String) As String</SourceLine>
+   <SourceLine>Return AndroidAESEncrypt(Password, Data)</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Password As String, Data As String</ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>DecryptAES</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>774180863</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function DecryptAES(Password As String, Data As String) As String</SourceLine>
+   <SourceLine>Return AndroidAESDecrypt(Password, Data)</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Password As String, Data As String</ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>IsLeftEqual</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1967071231</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function IsLeftEqual(Extends StringValue As String, Data As String) As Boolean</SourceLine>
+   <SourceLine>If Data &lt;&gt; "" And StringValue.Left(Data.Length) = Data Then</SourceLine>
+   <SourceLine>Return True</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return False</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Extends StringValue As String, Data As String</ItemParams>
+  <ItemResult>Boolean</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>GenVariableUUID</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2063810559</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function GenVariableUUID(Length As Integer) As String</SourceLine>
+   <SourceLine>Dim r As New random</SourceLine>
+   <SourceLine>Dim ReturnData As String</SourceLine>
+   <SourceLine>Dim d As DateTime</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>d = DateTime.Now</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>For i As Integer = 0 To Length</SourceLine>
+   <SourceLine>Dim ii As Integer = r.InRange(1,7)</SourceLine>
+   <SourceLine>If ii = 1 Then //numbers</SourceLine>
+   <SourceLine>ReturnData = ReturnData + Str(r.inrange(0,9))</SourceLine>
+   <SourceLine>ElseIf ii &gt; 5 Then//capitals</SourceLine>
+   <SourceLine>ReturnData = ReturnData + Chr(r.inrange(1,26)+64)</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>ReturnData = ReturnData + Chr(r.inrange(1,26)+96)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return ReturnData</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Length As Integer</ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>StringToBool</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1785380863</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function StringToBool(StringV As String) As Boolean</SourceLine>
+   <SourceLine>StringV = StringV.Trim()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If StringV.Lowercase = "true" Or StringV.Lowercase = "1" Or StringV.Lowercase = "yes" Then</SourceLine>
+   <SourceLine>Return True</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return False</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>StringV As String</ItemParams>
+  <ItemResult>Boolean</ItemResult>
+ </Method>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="1404776447">
+ <ObjName>XojoExtras</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>0</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Property>
+  <ItemName>ASCII_DoubleQuote</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1595389951</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>ASCII_DoubleQuote As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>ASCII_DoubleQuote As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <SetAccessor>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Set</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Set</SourceLine>
+  </SetAccessor>
+  <GetAccessor>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Get</SourceLine>
+   <SourceLine>Return Chr(34)</SourceLine>
+   <SourceLine>End Get</SourceLine>
+  </GetAccessor>
+ </Property>
+ <Property>
+  <ItemName>ASCII_SingleQuote</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1608038399</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>ASCII_SingleQuote As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>ASCII_SingleQuote As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <SetAccessor>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Set</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Set</SourceLine>
+  </SetAccessor>
+  <GetAccessor>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Get</SourceLine>
+   <SourceLine>Return Chr(39)</SourceLine>
+   <SourceLine>End Get</SourceLine>
+  </GetAccessor>
+ </Property>
+ <Property>
+  <ItemName>ASCII_NewLine</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>731228159</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>ASCII_NewLine As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>ASCII_NewLine As String</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <SetAccessor>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Set</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Set</SourceLine>
+  </SetAccessor>
+  <GetAccessor>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Get</SourceLine>
+   <SourceLine>Return Chr(13) + Chr(10)</SourceLine>
+   <SourceLine>End Get</SourceLine>
+  </GetAccessor>
+ </Property>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ASCII_DoubleQuote</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ASCII_SingleQuote</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ASCII_NewLine</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="MobileScreen" ID="709871615">
+ <ObjName>Screen_Main</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>1</IsClass>
+ <Superclass>MobileScreen</Superclass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <HookInstance>
+  <ItemName>Opening</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>859412479</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Opening()</SourceLine>
+   <SourceLine>AndroidXojoMDM.LoadAndroidApp()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ReloadPage()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>StartLocation()</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <Method>
+  <ItemName>GetHardware</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>994594815</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub GetHardware()</SourceLine>
+   <SourceLine>Dim HardwareID As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>HardwareID = GetHardwareID(App.AndroidContextHandle)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If HardwareID &lt;&gt; App.AppIden And App.AppIden &lt;&gt; "" Then</SourceLine>
+   <SourceLine>HardwareID = HardwareID + " - " + App.AppIden</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Label_AppID.Text = HardwareID</SourceLine>
+   <SourceLine>ScreenCount = ScreenCount + 1</SourceLine>
+   <SourceLine>Label_Version.Text = "v" + Str(app.MajorVersion) + "." + _</SourceLine>
+   <SourceLine>Str(app.MinorVersion) + "." + Str(app.BugVersion) + ":" + Str(app.NonReleaseVersion) + " - " + Str(ScreenCount)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Label_SN.Text = app.Device_SerialNumber</SourceLine>
+   <SourceLine>Label_IMEI.Text = app.Device_IMEI</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>AddEvent</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>471941119</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub AddEvent(DateTimeStr As String, EventName As String, ActionStr As String, Data As String, IsReload As Boolean = False)</SourceLine>
+   <SourceLine>If ActionStr &lt;&gt; "" Then</SourceLine>
+   <SourceLine>If EventName = "XojoLog" Then</SourceLine>
+   <SourceLine>If Data.IsLeftEqual("&gt;") Then</SourceLine>
+   <SourceLine>TextArea_Status.TextColor = Color.Red</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>TextArea_Status.TextColor = Color.Black</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>LastScreenStatusData = Data</SourceLine>
+   <SourceLine>TextArea_Status.Text = Data</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>Dim SendData As String</SourceLine>
+   <SourceLine>Dim PrevActionStr As String</SourceLine>
+   <SourceLine>Dim LineKey As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Select Case ActionStr</SourceLine>
+   <SourceLine>Case "Package"</SourceLine>
+   <SourceLine>PrevActionStr = ActionStr</SourceLine>
+   <SourceLine>ActionStr = "Log"</SourceLine>
+   <SourceLine>Case "Owner"</SourceLine>
+   <SourceLine>PrevActionStr = ActionStr</SourceLine>
+   <SourceLine>ActionStr = "Log"</SourceLine>
+   <SourceLine>End Select</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>LineKey = String.FromArray(Array(DateTimeStr, EventName, ActionStr, Data), MessageStructureDelimiter)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Not LineSaveDic.HasKey(LineKey) Then</SourceLine>
+   <SourceLine>SendData = DateTimeStr + ": " + ActionStr</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Data.Trim() &lt;&gt; "" Then</SourceLine>
+   <SourceLine>SendData = SendData + " - " + Data</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Table_Events.AddRowAt(0, SendData)</SourceLine>
+   <SourceLine>Table_Events.ScrollPosition = 0</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Not IsReload Then</SourceLine>
+   <SourceLine>SavedDataLines.Add(LineKey)</SourceLine>
+   <SourceLine>LineSaveDic.Value(LineKey) = ""</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If SavedDataLines.LastIndex &gt; SavedDataLinesLimit Then</SourceLine>
+   <SourceLine>If LineSaveDic.HasKey(SavedDataLines(0)) Then</SourceLine>
+   <SourceLine>LineSaveDic.Remove(SavedDataLines(0))</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>SavedDataLines.RemoveAt(0)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>System.DebugLog(SendData)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Select Case PrevActionStr</SourceLine>
+   <SourceLine>Case "Package"</SourceLine>
+   <SourceLine>StartCommand("UninstallRefresh")</SourceLine>
+   <SourceLine>Case "Owner"</SourceLine>
+   <SourceLine>Timer_KioskAutoExit.RunMode = Timer.RunModes.Off</SourceLine>
+   <SourceLine>End Select</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>DateTimeStr As String, EventName As String, ActionStr As String, Data As String, IsReload As Boolean = False</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>StartCommand</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1710317567</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub StartCommand(CommandName As String, CommandData As String = "")</SourceLine>
+   <SourceLine>//{</SourceLine>
+   <SourceLine>//"disableCamera": True,</SourceLine>
+   <SourceLine>//"restrictNetwork": { "wifi": True, "mobileData": False },</SourceLine>
+   <SourceLine>//"passwordPolicy": { "quality": "alphanumeric", "minLength": 8 },</SourceLine>
+   <SourceLine>//"hideApp": "com.example.app",</SourceLine>
+   <SourceLine>//"restrictPermission": { "package": "com.example.app", "permission": "CAMERA" },</SourceLine>
+   <SourceLine>//"setTempPin": "1234",</SourceLine>
+   <SourceLine>//"frpPolicy": { "enabled": True, "adminEmail": "admin@example.com" },</SourceLine>
+   <SourceLine>//"restrictBluetooth": True,</SourceLine>
+   <SourceLine>//"restrictUSB": True,</SourceLine>
+   <SourceLine>//"updatePolicy": { "type": "window", "start": "00:00", "end": "06:00" },</SourceLine>
+   <SourceLine>//"userId": 10</SourceLine>
+   <SourceLine>//"wifiConfig": {</SourceLine>
+   <SourceLine>//"ssid": "MyWiFi",</SourceLine>
+   <SourceLine>//"password": "SecurePass123",</SourceLine>
+   <SourceLine>//"security": "WPA"</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine>//}</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim MessageData As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>MessageData = AndroidXojoMDM.StartCommand("LocalCommand", "", CommandName, CommandData)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>LoadData("LocalCommand", MessageData)</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>CommandName As String, CommandData As String = ""</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>LoadData</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>404807679</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub LoadData(CommandType As String, MessageData As String)</SourceLine>
+   <SourceLine>If MessageData.Trim() &lt;&gt; "" Then</SourceLine>
+   <SourceLine>If Not IsNull(Screen_Main) Then</SourceLine>
+   <SourceLine>If MessageData.IsLeftEqual("APPS:") Then</SourceLine>
+   <SourceLine>Dim DataRows(-1) As String</SourceLine>
+   <SourceLine>Dim TempLabel, TempPackage As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>PopupMenu_Apps.RemoveAllRows()</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>MessageData = MessageData.NthField("APPS:", 2)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>DataRows = MessageData.ToArray(MessageDataDelimiter)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>For i As Integer = 0 To DataRows.LastIndex</SourceLine>
+   <SourceLine>TempLabel = DataRows(i).NthField(MessageDelimiter, 1)</SourceLine>
+   <SourceLine>TempPackage = DataRows(i).NthField(MessageDelimiter, 2)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>PopupMenu_Apps.AddRow(TempLabel)</SourceLine>
+   <SourceLine>PopupMenu_Apps.RowTagAt(PopupMenu_Apps.RowCount-1) = TempPackage</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>AddEvent(DateTime.Now.SQLDateTime, CommandType, _</SourceLine>
+   <SourceLine>MessageData.NthField(MessageDelimiter, 1), _</SourceLine>
+   <SourceLine>MessageData.NthField(MessageDelimiter, 2))</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>CommandType As String, MessageData As String</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>ReloadData</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2042038271</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub ReloadData(IsReload As Boolean)</SourceLine>
+   <SourceLine>If TempScreenEvents.LastIndex &gt; -1 Then</SourceLine>
+   <SourceLine>For i As Integer = 0 To TempScreenEvents.LastIndex</SourceLine>
+   <SourceLine>AddEvent(TempScreenEvents(i).NthField(MessageStructureDelimiter, 1), _</SourceLine>
+   <SourceLine>TempScreenEvents(i).NthField(MessageStructureDelimiter, 2), _</SourceLine>
+   <SourceLine>TempScreenEvents(i).NthField(MessageStructureDelimiter, 3), _</SourceLine>
+   <SourceLine>TempScreenEvents(i).NthField(MessageStructureDelimiter, 4))</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine>Redim TempScreenEvents(-1)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If SavedDataLines.LastIndex &gt; -1 Then</SourceLine>
+   <SourceLine>For i As Integer = 0 To SavedDataLines.LastIndex</SourceLine>
+   <SourceLine>AddEvent(SavedDataLines(i).NthField(MessageStructureDelimiter, 1), _</SourceLine>
+   <SourceLine>SavedDataLines(i).NthField(MessageStructureDelimiter, 2), _</SourceLine>
+   <SourceLine>SavedDataLines(i).NthField(MessageStructureDelimiter, 3), _</SourceLine>
+   <SourceLine>SavedDataLines(i).NthField(MessageStructureDelimiter, 4), IsReload)</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>IsReload As Boolean</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>ReloadPage</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2145357823</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub ReloadPage()</SourceLine>
+   <SourceLine>If IsNull(LineSaveDic) Then</SourceLine>
+   <SourceLine>LineSaveDic = New Dictionary</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Table_Events.RowCount = 0 Then</SourceLine>
+   <SourceLine>LineSaveDic = New Dictionary</SourceLine>
+   <SourceLine>ReloadData(False)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If Label_AppID.Text = "" Then</SourceLine>
+   <SourceLine>GetHardware()</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If PopupMenu_Apps.RowCount = 0 Then</SourceLine>
+   <SourceLine>StartCommand("UninstallRefresh")</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If TextArea_Status.Text = "" And LastScreenStatusData &lt;&gt; "" Then</SourceLine>
+   <SourceLine>If LastScreenStatusData.IsLeftEqual("&gt;") Then</SourceLine>
+   <SourceLine>TextArea_Status.TextColor = Color.Red</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>TextArea_Status.TextColor = Color.Black</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>TextArea_Status.Text = LastScreenStatusData</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>StartLocation</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>931934207</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub StartLocation(Override As Boolean = False)</SourceLine>
+   <SourceLine>If Override Then</SourceLine>
+   <SourceLine>Try</SourceLine>
+   <SourceLine>Table_Events.AddRowAt(0, "Location Started")</SourceLine>
+   <SourceLine>Table_Events.ScrollPosition = 0</SourceLine>
+   <SourceLine>Location_Device.Start()</SourceLine>
+   <SourceLine>Catch e As RuntimeException</SourceLine>
+   <SourceLine>TextArea_Status.Text = "Location Failed: " + e.Message</SourceLine>
+   <SourceLine>End Try</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>Override As Boolean = False</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Property>
+  <ItemName>ContainerControlDictionary</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1813069823</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>ContainerControlDictionary As Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>ContainerControlDictionary As Dictionary</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>ScreenCount</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2035044351</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>ScreenCount As Integer = 0</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>ScreenCount As Integer = 0</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>LineSaveDic</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>369571839</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>LineSaveDic As Dictionary</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>LineSaveDic As Dictionary</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>IsLocationSent</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>976912383</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>IsLocationSent As Boolean = False</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>IsLocationSent As Boolean = False</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <PropertyVal Name="Orientation">0</PropertyVal>
+ <PropertyVal Name="HasBackButton">False</PropertyVal>
+ <PropertyVal Name="Modal">False</PropertyVal>
+ <PropertyVal Name="HasNavigationBar">False</PropertyVal>
+ <PropertyVal Name="Title">MDM App</PropertyVal>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>ScaleFactor</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Double</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>HasBackButton</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>NavigationBarHeight</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ControlCount</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Title</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>Untitled</PropertyValue>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>HasNavigationBar</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Modal</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ScreenCount</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>IsLocationSent</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+ <MobileDeviceType>1</MobileDeviceType>
+ <Orientation>0</Orientation>
+ <ControlBehavior>
+  <Superclass>MobileLocation</Superclass>
+  <HookInstance>
+   <ItemName>LocationChanged</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>453597183</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub LocationChanged(latitude As Double, longitude As Double, accuracy As Double, altitude As Double, altitudeAccuracy As Double, course As Double, speed As Double)</SourceLine>
+    <SourceLine>//SendLocationUpdate(latitude, longitude, speed)</SourceLine>
+    <SourceLine>#Pragma Unused latitude</SourceLine>
+    <SourceLine>#Pragma Unused longitude</SourceLine>
+    <SourceLine>#Pragma Unused accuracy</SourceLine>
+    <SourceLine>#Pragma Unused altitude</SourceLine>
+    <SourceLine>#Pragma Unused altitudeAccuracy</SourceLine>
+    <SourceLine>#Pragma Unused course</SourceLine>
+    <SourceLine>#Pragma Unused speed</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+  <HookInstance>
+   <ItemName>AuthorizationStateChanged</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>648609791</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub AuthorizationStateChanged(state As MobileLocation.AuthorizationStates)</SourceLine>
+    <SourceLine>//StartLocation()</SourceLine>
+    <SourceLine>#Pragma Unused state</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>AndroidMobileTable</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1202782207</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>StartCommand("Lock")</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine>Timer_AutoUnlock.RunMode = Timer.RunModes.Single</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>2056208383</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>If TextField_InstallPath.Text.Trim() &lt;&gt; "" Then</SourceLine>
+    <SourceLine>StartCommand("Install", EncodeBase64(TextField_InstallPath.Text, 0))</SourceLine>
+    <SourceLine>End If</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileTextField</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>275890175</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>StartCommand("UninstallRefresh")</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobilePopupMenu</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1838270463</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>StartCommand("Admin")</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>215293951</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>StartCommand("UnknownApps")</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileRectangle</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileRectangle</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>Timer</Superclass>
+  <HookInstance>
+   <ItemName>Run</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1426964479</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Run()</SourceLine>
+    <SourceLine>StartCommand("ExitKiosk")</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1976268799</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>StartCommand("Unlock")</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>Timer</Superclass>
+  <HookInstance>
+   <ItemName>Run</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1323964415</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Run()</SourceLine>
+    <SourceLine>StartCommand("Unlock")</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileTextArea</Superclass>
+  <HookInstance>
+   <ItemName>Opening</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1067782143</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Opening()</SourceLine>
+    <SourceLine>Me.TextFont = Font.SystemFont(14) //.Size = 12</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1607249919</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>StartLocation(True)</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileButton</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>MobileLabel</Superclass>
+ </ControlBehavior>
+ <Control>
+  <ControlClass>MobileLocation</ControlClass>
+  <ItemName>MobileLocation</ItemName>
+  <PropertyVal Name="Accuracy">1</PropertyVal>
+  <PropertyVal Name="AuthorizationState">0</PropertyVal>
+  <PropertyVal Name="Left">0</PropertyVal>
+  <PropertyVal Name="Name">Location_Device</PropertyVal>
+  <PropertyVal Name="PanelIndex">-1</PropertyVal>
+  <PropertyVal Name="Parent"></PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLocation</PropertyVal>
+  <PropertyVal Name="Top">0</PropertyVal>
+  <ControlIndex>0</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1573341183</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">80</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label_AppID</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text"></PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">726</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">106</PropertyVal>
+  <ControlIndex>1</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>989872127</PartID>
+ </Control>
+ <Control>
+  <ControlClass>AndroidMobileTable</ControlClass>
+  <ItemName>AndroidMobileTable</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="HasHeader">False</PropertyVal>
+  <PropertyVal Name="Header"></PropertyVal>
+  <PropertyVal Name="Height">229</PropertyVal>
+  <PropertyVal Name="InitialValue"></PropertyVal>
+  <PropertyVal Name="LastAddedRowIndex">0</PropertyVal>
+  <PropertyVal Name="LastRowIndex">0</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Table_Events</PropertyVal>
+  <PropertyVal Name="RowCount">0</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="ScrollPosition">0</PropertyVal>
+  <PropertyVal Name="SelectedRowIndex">0</PropertyVal>
+  <PropertyVal Name="SelectedRowText"></PropertyVal>
+  <PropertyVal Name="SeparatorColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="SeparatorThickness">0</PropertyVal>
+  <PropertyVal Name="Super">AndroidMobileTable</PropertyVal>
+  <PropertyVal Name="Top">277</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">334</PropertyVal>
+  <ControlIndex>2</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1755668479</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Lock</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_Lock</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">163</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">163</PropertyVal>
+  <ControlIndex>3</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1074540543</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Install</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="Name">Button_Install</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">201</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">100</PropertyVal>
+  <ControlIndex>4</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>151994367</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileTextField</ControlClass>
+  <ItemName>MobileTextField</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="AllowSpellChecking">False</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">39</PropertyVal>
+  <PropertyVal Name="Hint"></PropertyVal>
+  <PropertyVal Name="InputType">0</PropertyVal>
+  <PropertyVal Name="Left">121</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">TextField_InstallPath</PropertyVal>
+  <PropertyVal Name="Password">False</PropertyVal>
+  <PropertyVal Name="ReadOnly">True</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="SelectedText"></PropertyVal>
+  <PropertyVal Name="SelectionLength">0</PropertyVal>
+  <PropertyVal Name="SelectionStart">0</PropertyVal>
+  <PropertyVal Name="Super">MobileTextField</PropertyVal>
+  <PropertyVal Name="Text">APKURL</PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">194</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">226</PropertyVal>
+  <ControlIndex>5</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>64569343</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Refresh</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="Name">Button_UninstallRefresh</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">239</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">100</PropertyVal>
+  <ControlIndex>6</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>119754751</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobilePopupMenu</ControlClass>
+  <ItemName>MobilePopupMenu</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="InitialValue"></PropertyVal>
+  <PropertyVal Name="Left">121</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">PopupMenu_Apps</PropertyVal>
+  <PropertyVal Name="RowCount">0</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="SelectedRowIndex">0</PropertyVal>
+  <PropertyVal Name="SelectedRowText"></PropertyVal>
+  <PropertyVal Name="Super">MobilePopupMenu</PropertyVal>
+  <PropertyVal Name="Top">239</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">226</PropertyVal>
+  <ControlIndex>7</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>673912831</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Admin Permissions</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_Admin</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">11</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">334</PropertyVal>
+  <ControlIndex>8</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1421948927</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">User Install Permissions</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_InstallPermission</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">49</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">334</PropertyVal>
+  <ControlIndex>9</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>176154623</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileRectangle</ControlClass>
+  <ItemName>MobileRectangle</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="BorderColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="BorderThickness">0.00</PropertyVal>
+  <PropertyVal Name="CornerSize">0.00</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="FillColor">&amp;c80808000</PropertyVal>
+  <PropertyVal Name="Height">745</PropertyVal>
+  <PropertyVal Name="Left">355</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Rectangle2</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileRectangle</PropertyVal>
+  <PropertyVal Name="Top">11</PropertyVal>
+  <PropertyVal Name="Visible">False</PropertyVal>
+  <PropertyVal Name="Width">5</PropertyVal>
+  <ControlIndex>10</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>2113660927</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileRectangle</ControlClass>
+  <ItemName>MobileRectangle</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="BorderColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="BorderThickness">0.00</PropertyVal>
+  <PropertyVal Name="CornerSize">0.00</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="FillColor">&amp;c80808000</PropertyVal>
+  <PropertyVal Name="Height">745</PropertyVal>
+  <PropertyVal Name="Left">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Rectangle1</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileRectangle</PropertyVal>
+  <PropertyVal Name="Top">11</PropertyVal>
+  <PropertyVal Name="Visible">False</PropertyVal>
+  <PropertyVal Name="Width">5</PropertyVal>
+  <ControlIndex>11</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1591824383</PartID>
+ </Control>
+ <Control>
+  <ControlClass>Timer</ControlClass>
+  <ItemName>Timer</ItemName>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Left">0</PropertyVal>
+  <PropertyVal Name="Name">Timer_KioskAutoExit</PropertyVal>
+  <PropertyVal Name="PanelIndex">-1</PropertyVal>
+  <PropertyVal Name="Parent"></PropertyVal>
+  <PropertyVal Name="Period">60000</PropertyVal>
+  <PropertyVal Name="RunMode">0</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">Timer</PropertyVal>
+  <PropertyVal Name="Top">0</PropertyVal>
+  <ControlIndex>12</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>533766143</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label1</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text">App ID:</PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">726</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">59</PropertyVal>
+  <ControlIndex>13</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>2038824959</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Unlock</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">184</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_Unlock</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">163</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">163</PropertyVal>
+  <ControlIndex>14</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1034930175</PartID>
+ </Control>
+ <Control>
+  <ControlClass>Timer</ControlClass>
+  <ItemName>Timer</ItemName>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Left">0</PropertyVal>
+  <PropertyVal Name="Name">Timer_AutoUnlock</PropertyVal>
+  <PropertyVal Name="PanelIndex">-1</PropertyVal>
+  <PropertyVal Name="Parent"></PropertyVal>
+  <PropertyVal Name="Period">10000</PropertyVal>
+  <PropertyVal Name="RunMode">0</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">Timer</PropertyVal>
+  <PropertyVal Name="Top">0</PropertyVal>
+  <ControlIndex>15</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>30248959</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileTextArea</ControlClass>
+  <ItemName>MobileTextArea</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="AllowSpellChecking">False</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">89</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">TextArea_Status</PropertyVal>
+  <PropertyVal Name="ReadOnly">True</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="SelectedText"></PropertyVal>
+  <PropertyVal Name="SelectionLength">0</PropertyVal>
+  <PropertyVal Name="SelectionStart">0</PropertyVal>
+  <PropertyVal Name="Super">MobileTextArea</PropertyVal>
+  <PropertyVal Name="Text"></PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">514</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">334</PropertyVal>
+  <ControlIndex>16</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1421398015</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Re-Auth API</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">False</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_ReAuthAPI</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">87</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">163</PropertyVal>
+  <ControlIndex>17</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1135521791</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Re-Connect TCP</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">False</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">184</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_ReConnectTCP</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">87</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">163</PropertyVal>
+  <ControlIndex>18</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1620328447</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">258</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label_Version</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text"></PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">726</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">89</PropertyVal>
+  <ControlIndex>19</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1456209919</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">194</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label2</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text">Version:</PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">726</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">59</PropertyVal>
+  <ControlIndex>20</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1341517823</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">80</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label_SN</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text"></PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">696</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">267</PropertyVal>
+  <ControlIndex>21</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1802692607</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label3</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text">SN:</PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">696</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">59</PropertyVal>
+  <ControlIndex>22</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>283752447</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">80</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label_IMEI</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text"></PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">666</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">267</PropertyVal>
+  <ControlIndex>23</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>267259903</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label4</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text">IMEI:</PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">666</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">59</PropertyVal>
+  <ControlIndex>24</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>2027823103</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Xojo Location Start</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_StartLocation</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">125</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">163</PropertyVal>
+  <ControlIndex>25</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1967208447</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileButton</ControlClass>
+  <ItemName>MobileButton</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Caption">Send Location</PropertyVal>
+  <PropertyVal Name="CaptionColor">&amp;cffffff</PropertyVal>
+  <PropertyVal Name="Enabled">False</PropertyVal>
+  <PropertyVal Name="Height">30</PropertyVal>
+  <PropertyVal Name="Left">184</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">Button_SendLocation</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileButton</PropertyVal>
+  <PropertyVal Name="Top">125</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">163</PropertyVal>
+  <ControlIndex>26</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>32876543</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">55</PropertyVal>
+  <PropertyVal Name="Left">13</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label5</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text">GPS:</PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">611</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">59</PropertyVal>
+  <ControlIndex>27</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1331945471</PartID>
+ </Control>
+ <Control>
+  <ControlClass>MobileLabel</ControlClass>
+  <ItemName>MobileLabel</ItemName>
+  <PropertyVal Name="AccessibilityHint"></PropertyVal>
+  <PropertyVal Name="AccessibilityLabel"></PropertyVal>
+  <PropertyVal Name="Alignment">0</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">55</PropertyVal>
+  <PropertyVal Name="Left">80</PropertyVal>
+  <PropertyVal Name="LineBreakMode">0</PropertyVal>
+  <PropertyVal Name="LockBottom">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">False</PropertyVal>
+  <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+  <PropertyVal Name="Name">Label_GPS</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">MobileLabel</PropertyVal>
+  <PropertyVal Name="Text"></PropertyVal>
+  <PropertyVal Name="TextColor">&amp;c000000</PropertyVal>
+  <PropertyVal Name="Top">611</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">267</PropertyVal>
+  <ControlIndex>28</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>189007871</PartID>
+ </Control>
+</block>
+<block type="ApplicationIcon" ID="244807679">
+ <ObjName>App Icon</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <ItemName>App Icon</ItemName>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>16</Height>
+   <Orientation>0</Orientation>
+   <Platform>6</Platform>
+   <Resolution>72</Resolution>
+   <Width>16</Width>
+   <HeightDouble>16</HeightDouble>
+   <WidthDouble>16</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>16</Height>
+   <Orientation>0</Orientation>
+   <Platform>2</Platform>
+   <Resolution>144</Resolution>
+   <Width>16</Width>
+   <HeightDouble>16</HeightDouble>
+   <WidthDouble>16</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>32</Height>
+   <Orientation>0</Orientation>
+   <Platform>6</Platform>
+   <Resolution>72</Resolution>
+   <Width>32</Width>
+   <HeightDouble>32</HeightDouble>
+   <WidthDouble>32</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>32</Height>
+   <Orientation>0</Orientation>
+   <Platform>2</Platform>
+   <Resolution>144</Resolution>
+   <Width>32</Width>
+   <HeightDouble>32</HeightDouble>
+   <WidthDouble>32</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment>Tiles / Thumbnails</Comment>
+   <Device>16</Device>
+   <Height>48</Height>
+   <Orientation>0</Orientation>
+   <Platform>4</Platform>
+   <Resolution>96</Resolution>
+   <Width>48</Width>
+   <HeightDouble>48</HeightDouble>
+   <WidthDouble>48</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>128</Height>
+   <Orientation>0</Orientation>
+   <Platform>2</Platform>
+   <Resolution>72</Resolution>
+   <Width>128</Width>
+   <HeightDouble>128</HeightDouble>
+   <WidthDouble>128</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>128</Height>
+   <Orientation>0</Orientation>
+   <Platform>2</Platform>
+   <Resolution>144</Resolution>
+   <Width>128</Width>
+   <HeightDouble>128</HeightDouble>
+   <WidthDouble>128</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>256</Height>
+   <Orientation>0</Orientation>
+   <Platform>6</Platform>
+   <Resolution>72</Resolution>
+   <Width>256</Width>
+   <HeightDouble>256</HeightDouble>
+   <WidthDouble>256</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>256</Height>
+   <Orientation>0</Orientation>
+   <Platform>2</Platform>
+   <Resolution>144</Resolution>
+   <Width>256</Width>
+   <HeightDouble>256</HeightDouble>
+   <WidthDouble>256</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>512</Height>
+   <Orientation>0</Orientation>
+   <Platform>2</Platform>
+   <Resolution>72</Resolution>
+   <Width>512</Width>
+   <HeightDouble>512</HeightDouble>
+   <WidthDouble>512</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment></Comment>
+   <Device>16</Device>
+   <Height>512</Height>
+   <Orientation>0</Orientation>
+   <Platform>2</Platform>
+   <Resolution>144</Resolution>
+   <Width>512</Width>
+   <HeightDouble>512</HeightDouble>
+   <WidthDouble>512</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="22">4E6F74696669636174696F6E0D0A694F5320372D3130</Hex></Comment>
+   <Device>3</Device>
+   <Height>20</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>72</Resolution>
+   <Width>20</Width>
+   <HeightDouble>20</HeightDouble>
+   <WidthDouble>20</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="22">4E6F74696669636174696F6E0D0A694F5320372D3130</Hex></Comment>
+   <Device>3</Device>
+   <Height>20</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>144</Resolution>
+   <Width>20</Width>
+   <HeightDouble>20</HeightDouble>
+   <WidthDouble>20</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="22">4E6F74696669636174696F6E0D0A694F5320372D3130</Hex></Comment>
+   <Device>3</Device>
+   <Height>20</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>216</Resolution>
+   <Width>20</Width>
+   <HeightDouble>20</HeightDouble>
+   <WidthDouble>20</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="18">53657474696E67730D0A694F5320352D3130</Hex></Comment>
+   <Device>2</Device>
+   <Height>29</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>72</Resolution>
+   <Width>29</Width>
+   <HeightDouble>29</HeightDouble>
+   <WidthDouble>29</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="18">53657474696E67730D0A694F5320352D3130</Hex></Comment>
+   <Device>7</Device>
+   <Height>29</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>144</Resolution>
+   <Width>29</Width>
+   <HeightDouble>29</HeightDouble>
+   <WidthDouble>29</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="18">53657474696E67730D0A694F5320352D3130</Hex></Comment>
+   <Device>1</Device>
+   <Height>29</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>216</Resolution>
+   <Width>29</Width>
+   <HeightDouble>29</HeightDouble>
+   <WidthDouble>29</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="19">53706F746C696768740D0A694F5320372D3130</Hex></Comment>
+   <Device>2</Device>
+   <Height>40</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>72</Resolution>
+   <Width>40</Width>
+   <HeightDouble>40</HeightDouble>
+   <WidthDouble>40</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="19">53706F746C696768740D0A694F5320372D3130</Hex></Comment>
+   <Device>7</Device>
+   <Height>40</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>144</Resolution>
+   <Width>40</Width>
+   <HeightDouble>40</HeightDouble>
+   <WidthDouble>40</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="19">53706F746C696768740D0A694F5320372D3130</Hex></Comment>
+   <Device>1</Device>
+   <Height>40</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>216</Resolution>
+   <Width>40</Width>
+   <HeightDouble>40</HeightDouble>
+   <WidthDouble>40</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="13">4170700D0A694F5320372D3130</Hex></Comment>
+   <Device>1</Device>
+   <Height>60</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>144</Resolution>
+   <Width>60</Width>
+   <HeightDouble>60</HeightDouble>
+   <WidthDouble>60</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="13">4170700D0A694F5320372D3130</Hex></Comment>
+   <Device>1</Device>
+   <Height>60</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>216</Resolution>
+   <Width>60</Width>
+   <HeightDouble>60</HeightDouble>
+   <WidthDouble>60</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="13">4170700D0A694F5320372D3130</Hex></Comment>
+   <Device>2</Device>
+   <Height>76</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>72</Resolution>
+   <Width>76</Width>
+   <HeightDouble>76</HeightDouble>
+   <WidthDouble>76</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="13">4170700D0A694F5320372D3130</Hex></Comment>
+   <Device>2</Device>
+   <Height>76</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>144</Resolution>
+   <Width>76</Width>
+   <HeightDouble>76</HeightDouble>
+   <WidthDouble>76</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="13">4170700D0A694F5320392D3130</Hex></Comment>
+   <Device>2</Device>
+   <Height>83</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>144</Resolution>
+   <Width>83</Width>
+   <HeightDouble>84</HeightDouble>
+   <WidthDouble>84</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <ImageSpecification>
+   <Comment><Hex bytes="14">4170700D0A694F532031302D3131</Hex></Comment>
+   <Device>8192</Device>
+   <Height>1024</Height>
+   <Orientation>0</Orientation>
+   <Platform>1</Platform>
+   <Resolution>72</Resolution>
+   <Width>1024</Width>
+   <HeightDouble>1024</HeightDouble>
+   <WidthDouble>1024</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="78">00F1D173010201000000002E443A5C53564E5C5B4C6F676F735D5C4170702049636F6E735C4150505F4D6F62696C65436F6E74726F6C2E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\App Icons\APP_MobileControl.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\App Icons\APP_MobileControl.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 36x36 Icon</Comment>
+   <Device>1</Device>
+   <Height>36</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>36</Width>
+   <HeightDouble>36</HeightDouble>
+   <WidthDouble>36</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="78">00F1D173010201000000002E443A5C53564E5C5B4C6F676F735D5C4170702049636F6E735C4150505F4D6F62696C65436F6E74726F6C2E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\App Icons\APP_MobileControl.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\App Icons\APP_MobileControl.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 48x48 Icon</Comment>
+   <Device>1</Device>
+   <Height>48</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>48</Width>
+   <HeightDouble>48</HeightDouble>
+   <WidthDouble>48</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="78">00F1D173010201000000002E443A5C53564E5C5B4C6F676F735D5C4170702049636F6E735C4150505F4D6F62696C65436F6E74726F6C2E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\App Icons\APP_MobileControl.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\App Icons\APP_MobileControl.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 72x72 Icon</Comment>
+   <Device>1</Device>
+   <Height>72</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>72</Width>
+   <HeightDouble>72</HeightDouble>
+   <WidthDouble>72</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="78">00F1D173010201000000002E443A5C53564E5C5B4C6F676F735D5C4170702049636F6E735C4150505F4D6F62696C65436F6E74726F6C2E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\App Icons\APP_MobileControl.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\App Icons\APP_MobileControl.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 96x96 Icon</Comment>
+   <Device>1</Device>
+   <Height>96</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>96</Width>
+   <HeightDouble>96</HeightDouble>
+   <WidthDouble>96</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="78">00F1D173010201000000002E443A5C53564E5C5B4C6F676F735D5C4170702049636F6E735C4150505F4D6F62696C65436F6E74726F6C2E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\App Icons\APP_MobileControl.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\App Icons\APP_MobileControl.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 144x144 Icon</Comment>
+   <Device>1</Device>
+   <Height>144</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>144</Width>
+   <HeightDouble>144</HeightDouble>
+   <WidthDouble>144</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="78">00F1D173010201000000002E443A5C53564E5C5B4C6F676F735D5C4170702049636F6E735C4150505F4D6F62696C65436F6E74726F6C2E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\App Icons\APP_MobileControl.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\App Icons\APP_MobileControl.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 192x192 Icon</Comment>
+   <Device>1</Device>
+   <Height>192</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>192</Width>
+   <HeightDouble>192</HeightDouble>
+   <WidthDouble>192</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="102">00F1D1730102010000000046443A5C53564E5C5B4C6F676F735D5C53636F6F746572204175746F6D6174696F6E5C416E64726F69642041707049636F6E735C416E64726F696433367833364031782E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\Scooter Automation\Android AppIcons\Android36x36@1x.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\Scooter Automation\Android AppIcons\Android36x36@1x.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 36x36 Icon</Comment>
+   <Device>31</Device>
+   <Height>36</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>36</Width>
+   <HeightDouble>36</HeightDouble>
+   <WidthDouble>36</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="102">00F1D1730102010000000046443A5C53564E5C5B4C6F676F735D5C53636F6F746572204175746F6D6174696F6E5C416E64726F69642041707049636F6E735C416E64726F696434387834384031782E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\Scooter Automation\Android AppIcons\Android48x48@1x.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\Scooter Automation\Android AppIcons\Android48x48@1x.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 48x48 Icon</Comment>
+   <Device>31</Device>
+   <Height>48</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>48</Width>
+   <HeightDouble>48</HeightDouble>
+   <WidthDouble>48</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="102">00F1D1730102010000000046443A5C53564E5C5B4C6F676F735D5C53636F6F746572204175746F6D6174696F6E5C416E64726F69642041707049636F6E735C416E64726F696437327837324031782E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\Scooter Automation\Android AppIcons\Android72x72@1x.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\Scooter Automation\Android AppIcons\Android72x72@1x.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 72x72 Icon</Comment>
+   <Device>31</Device>
+   <Height>72</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>72</Width>
+   <HeightDouble>72</HeightDouble>
+   <WidthDouble>72</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="102">00F1D1730102010000000046443A5C53564E5C5B4C6F676F735D5C53636F6F746572204175746F6D6174696F6E5C416E64726F69642041707049636F6E735C416E64726F696439367839364031782E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\Scooter Automation\Android AppIcons\Android96x96@1x.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\Scooter Automation\Android AppIcons\Android96x96@1x.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 96x96 Icon</Comment>
+   <Device>31</Device>
+   <Height>96</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>96</Width>
+   <HeightDouble>96</HeightDouble>
+   <WidthDouble>96</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="104">00F1D1730102010000000048443A5C53564E5C5B4C6F676F735D5C53636F6F746572204175746F6D6174696F6E5C416E64726F69642041707049636F6E735C416E64726F6964313434783134344031782E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\Scooter Automation\Android AppIcons\Android144x144@1x.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\Scooter Automation\Android AppIcons\Android144x144@1x.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 144x144 Icon</Comment>
+   <Device>31</Device>
+   <Height>144</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>144</Width>
+   <HeightDouble>144</HeightDouble>
+   <WidthDouble>144</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+ <ImageRepresentation>
+  <SaveInfo><Hex bytes="104">00F1D1730102010000000048443A5C53564E5C5B4C6F676F735D5C53636F6F746572204175746F6D6174696F6E5C416E64726F69642041707049636F6E735C416E64726F6964313932783139324031782E706E670300000000010004000000000100000000000000</Hex></SaveInfo>
+  <FullPath>D:\SVN\[Logos]\Scooter Automation\Android AppIcons\Android192x192@1x.png</FullPath>
+  <PartialPath>..\..\..\[Logos]\Scooter Automation\Android AppIcons\Android192x192@1x.png</PartialPath>
+  <ImageSpecification>
+   <Comment>Android 192x192 Icon</Comment>
+   <Device>31</Device>
+   <Height>192</Height>
+   <Orientation>0</Orientation>
+   <Platform>15</Platform>
+   <Resolution>72</Resolution>
+   <Width>192</Width>
+   <HeightDouble>192</HeightDouble>
+   <WidthDouble>192</WidthDouble>
+  </ImageSpecification>
+ </ImageRepresentation>
+</block>
+<block type="BuildAutomation" ID="861761535">
+ <ObjName>Build Automation</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+</block>
+<block type="BuildStepsList" ID="1402146815">
+ <ObjName>Linux</ObjName>
+ <ObjContainerID>861761535</ObjContainerID>
+</block>
+<block type="BuildProjectStep" ID="1815814143">
+ <ObjName>Build</ObjName>
+ <ObjContainerID>1402146815</ObjContainerID>
+</block>
+<block type="BuildStepsList" ID="1582764031">
+ <ObjName>Mac OS X</ObjName>
+ <ObjContainerID>861761535</ObjContainerID>
+</block>
+<block type="BuildProjectStep" ID="2048526335">
+ <ObjName>Build</ObjName>
+ <ObjContainerID>1582764031</ObjContainerID>
+</block>
+<block type="SignProjectScriptStep" ID="951730175">
+ <ObjName>Sign</ObjName>
+ <ObjContainerID>1582764031</ObjContainerID>
+ <DeveloperID></DeveloperID>
+</block>
+<block type="BuildStepsList" ID="2021761023">
+ <ObjName>Windows</ObjName>
+ <ObjContainerID>861761535</ObjContainerID>
+</block>
+<block type="BuildProjectStep" ID="1207318527">
+ <ObjName>Build</ObjName>
+ <ObjContainerID>2021761023</ObjContainerID>
+</block>
+<block type="BuildStepsList" ID="1288361983">
+ <ObjName>Android</ObjName>
+ <ObjContainerID>861761535</ObjContainerID>
+</block>
+<block type="CopyFilesStep" ID="1148039167">
+ <ObjName>LibCopy</ObjName>
+ <ObjContainerID>1288361983</ObjContainerID>
+ <StepAppliesTo>0</StepAppliesTo>
+ <CopyFileStepArch>0</CopyFileStepArch>
+ <Target>0</Target>
+ <Destination>2</Destination>
+ <Subdirectory></Subdirectory>
+ <FileAlias>../Android%20Studio/Android%20MDM%20Lib/build/outputs/aar/Android%20MDM%20Lib-release.aar</FileAlias>
+</block>
+<block type="BuildProjectStep" ID="433825791">
+ <ObjName>Build</ObjName>
+ <ObjContainerID>1288361983</ObjContainerID>
+</block>
+<block type="UIState" ID="0">
+ <WarningPreferences>
+  <ItemName>5</ItemName>
+  <ItemData>0</ItemData>
+  <ItemName>6</ItemName>
+  <ItemData>0</ItemData>
+  <ItemName>7</ItemName>
+  <ItemData>0</ItemData>
+  <ItemName>14</ItemName>
+  <ItemData>0</ItemData>
+  <ItemName>2</ItemName>
+  <ItemData>1</ItemData>
+  <ItemName>-2</ItemName>
+  <ItemData>1</ItemData>
+  <ItemName>16</ItemName>
+  <ItemData>0</ItemData>
+ </WarningPreferences>
+ <IOSDebugDevice>Pixel 7 (Emulator)</IOSDebugDevice>
+ <BreakPointGroup>
+  <PartID>620339199</PartID>
+  <ItemName></ItemName>
+  <UnitType>Method</UnitType>
+  <UnitID>Private Function StartCommand_Int(CommandFrom As String, CommandID As String, CommandName As String, CommandData As String) As String</UnitID>
+  <lineNum>25</lineNum>
+ </BreakPointGroup>
+ <StudioWindowState>
+  <EditBounds><Rect left="-8" top="-8" width="1936" height="1048"/></EditBounds>
+  <WindowMaximized>1</WindowMaximized>
+  <Editors>
+   <EditorCount>1</EditorCount>
+   <Editor>
+    <EditorIndex>0</EditorIndex>
+    <EditorLocation>AndroidXojoMDM.startPolicyService</EditorLocation>
+    <EditorPath></EditorPath>
+    <EditingPartID>620339199</EditingPartID>
+    <EditorPath></EditorPath>
+   </Editor>
+   <SelectedTab>0</SelectedTab>
+  </Editors>
+ </StudioWindowState>
+</block>
+</RBProject>
